@@ -468,3 +468,59 @@ section {
         flex: 1 1 100%; /* 1 carte par ligne */
     }
 }
+
+/* Footer */
+footer {
+    background-color: #16423C; /* Couleur de fond */
+    color: #E9EFEC; /* Texte clair */
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Ombre en haut */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links li {
+    display: inline;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #6A9C89; /* Couleur d'accent */
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #C4DAD2; /* Couleur au survol */
+}
+
+.back-to-top {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #6A9C89;
+    font-size: 14px;
+}
+
+.back-to-top:hover {
+    color: #C4DAD2;
+}
