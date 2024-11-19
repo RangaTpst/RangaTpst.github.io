@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ranga</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="JS/script.js" defer></script>
+</head>
+<body>
+    <!-- En-tête avec logo et menu centré -->
+    <header>
+        <div class="logo">
+            <img src="images/logo/photo.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Mon CV</a></li>
+                <li><a href="#">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bandeau latéral rétractable -->
+    <aside id="sidebar">
+        <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#formation">Formation</a></li>
+            <li><a href="#skills">Compétences professionnelles</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projets</a></li>
+        </ul>
+    </aside>
+
+    <!-- Fond interactif -->
+    <canvas id="background"></canvas>
+
+    <!-- Sections de contenu -->
+    <main>
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p><br><br>
+                Je suis Nicolas Rouillé, un passionné du développement web, de la programmation, et de la création de contenu.<br><br>
+                J'adore explorer les nouvelles technologies et m'immerger dans des projets créatifs qui allient design et code. Que ce soit en développant des sites web modernes ou en travaillant sur des applications logicielles, j'aime relever des défis techniques pour apporter des solutions innovantes.<br><br>
+                Côté parcours académique, j'ai obtenu un BAC STI2D avec une spécialisation en Énergies et Environnements (EE), suivi de trois années en faculté d'informatique. Cette formation m'a permis d'acquérir des bases solides en programmation, algorithmes, et conception de systèmes. Actuellement, je poursuis un BTS SIO, option SLAM (Solutions Logicielles et Applications Métiers), où je me spécialise dans le développement de logiciels et la gestion de bases de données.<br><br>
+                En plus de mes compétences en informatique, je suis également un créatif dans l'âme. Dans mon temps libre, je m'adonne au dessin, où je laisse libre cours à mon imagination, ainsi qu'à la photographie, en capturant des moments uniques et des paysages inspirants. Les jeux vidéo occupent également une place importante dans ma vie, que ce soit pour la détente ou pour m'inspirer de nouveaux concepts créatifs.
+                
+            </p>
+        
+            <!-- Blocs d'images avec effets de flou -->
+            <div class="image-links">
+                <!-- Bloc GitHub -->
+                <a href="https://github.com/RangaTpst" target="_blank" class="image-block">
+                    <img src="images/logo/github.png" alt="GitHub">
+                    <div class="overlay">GitHub</div>
+                </a>
+                <!-- Bloc Dessin -->
+                <a href="https://www.instagram.com/ranga_art/" target="_blank" class="image-block">
+                    <img src="images/logo/ranga_art.jpg" alt="Dessin">
+                    <div class="overlay">Dessin</div>
+                </a>
+                <!-- Bloc Photo -->
+                <a href="https://www.instagram.com/rangaphotographe/" target="_blank" class="image-block">
+                    <img src="images/logo/ranga_photo.jpg" alt="Photo">
+                    <div class="overlay">Photo</div>
+                </a>
+            </div>
+        </section>
+            
+        </section>
+        <section id="formation">
+            <h2>Formation</h2>
+            <p><br><br>
+                Au cours de ma formation en BTS SIO option SLAM, j'ai acquis des compétences variées me permettant d'intervenir sur différents aspects du développement et de la gestion d'applications. Voici un aperçu des compétences techniques que j'ai développées :
+            </p>
+            <br><br>
+            <ul>
+                <li><strong>Développement web et mobile :</strong> Création d'applications dynamiques avec <em>Python, PHP, Java</em> ainsi que des technologies front-end comme <em>HTML, CSS, JavaScript</em>. J'ai également travaillé avec le framework <em>Laravel</em> pour développer des applications web robustes et sécurisées.</li><br><br>
+                <li><strong>Framework Laravel :</strong> Utilisation de <em>Laravel</em> pour le développement d'applications web, y compris la gestion des routes, des middlewares, des contrôleurs, ainsi que l'intégration avec des bases de données via Eloquent ORM.</li><br><br>
+                <li><strong>Gestion de bases de données :</strong> Conception, optimisation et gestion de bases de données relationnelles avec <em>MySQL, PostgreSQL</em>, en utilisant des migrations et des modèles dans Laravel pour une intégration simplifiée.</li><br><br>
+                <li><strong>Sécurité informatique :</strong> Mise en œuvre des meilleures pratiques pour sécuriser les applications web, notamment en utilisant les fonctionnalités de sécurité intégrées de Laravel comme la validation des entrées, l'authentification et la protection CSRF.</li><br><br>
+                <li><strong>Gestion de projet :</strong> Utilisation des méthodologies <em>Agile/Scrum</em> pour le développement collaboratif de projets logiciels, avec une attention particulière portée sur la planification, le suivi et la livraison des projets.</li><br><br>
+                <li><strong>Travail collaboratif :</strong> Utilisation d'outils tels que <em>Git/GitHub</em> pour le contrôle de version, la gestion des branches, et la collaboration en équipe.</li><br><br>
+            </ul>
+            
+            <p>
+                Ces compétences me permettent d'intervenir sur l'ensemble du cycle de vie d'une application, de sa conception à son déploiement, en passant par le développement, les tests, et la sécurisation. Mon objectif est de continuer à renforcer ces compétences tout en explorant de nouvelles technologies comme le <em>Cloud Computing</em> et l'<em>intelligence artificielle</em>.
+            </p>
+        </section>
+        <section id="skills">
+            <h2>Compétences professionnelles</h2>
+            <div class="skills-item">
+                <!-- Texte à gauche, image à droite -->
+                <div class="text">
+                    <h3>Consultant SAP S/4HANA et SAP ECC</h3>
+                    <p>Expertise dans l'implémentation et l'optimisation des systèmes SAP pour améliorer les processus métiers des entreprises.</p>
+                </div>
+                <div class="image">
+                    <img src="images/img/SAP_ERP.png" alt="SAP">
+                </div>
+            </div>
+            
+            <div class="skills-item reverse">
+                <!-- Texte à droite, image à gauche -->
+                <div class="text">
+                    <h3>Gestion des processus métier</h3>
+                    <p>Optimisation des flux de travail dans la production, la logistique, et la gestion des clients. Création et Support sur les flux de commerce, de la commande client jusqu'à la facture.</p>
+                </div>
+                <div class="image">
+                    <img src="images/img/SAP_MODULE.png" alt="Gestion de Projet">
+                </div>
+            </div>
+            
+            <div class="skills-item">
+                <!-- Texte à gauche, image à droite -->
+                <div class="text">
+                    <h3>Formation des utilisateurs</h3>
+                    <p>Accompagnement des équipes dans la prise en main des systèmes SAP, incluant la formation et le support.</p>
+                </div>
+                <div class="image">
+                    <img src="images/img/training_sap.png" alt="Formation SAP">
+                </div>
+            </div>
+            <div class="skills-item reverse">
+                <!-- Texte à droite, image à gauche -->
+                <div class="text">
+                    <h3>Integration EDI</h3>
+                    <p>Integration EDI avec les partenaires de commerce, pour la gestion des flux de données controllé et modulable <br><br>
+                    L'integration EDI est un facteur majeur de communications entre les différents partenaires grace à la normalisation des documents X12 et EDIFACT. tels que les commandes, les livraisons ou encore les factures. </p>
+                </div>
+                <div class="image">
+                    <img src="images/img/Boomi-01.png" alt="BOOMI_Logo">
+                </div>
+            </div>
+        </section>
+        
+        
+        <section id="certifications">
+            <div class="certification-header">
+                <h2>Compétences informatiques</h2>
+            </div>
+            <div class="certification-gallery">
+                <!-- Icône 1 -->
+                <div class="certification-item">
+                    <img src="images/logo/logo_html_couleur.png" alt="HTML">
+                    <div class="overlay">HTML</div>
+                </div>
+                <!-- Icône 2 -->
+                <div class="certification-item">
+                    <img src="images/logo/logo_css_couleur.png" alt="CSS">
+                    <div class="overlay">CSS</div>
+                </div>
+                <!-- Icône 3 -->
+                <div class="certification-item">
+                    <img src="images/logo/logo_js_couleur.png" alt="JS">
+                    <div class="overlay">JavaScript</div>
+                </div>
+                <!-- Icône 4 -->
+                <div class="certification-item">
+                    <img src="images/logo/logo_PHP_Couleur.png" alt="PHP">
+                    <div class="overlay">PHP</div>
+                </div>
+                <!-- Icône 5 -->
+                <div class="certification-item">
+                    <img src="images/logo/githublogo.png" alt="Github">
+                    <div class="overlay">Github</div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section id="projects">
+            <div class="project-header">
+                <h2>Projets</h2>
+            </div>
+            <div class="project-gallery">
+                <!-- Projet 1 -->
+                <div class="project-item">
+                    <img src="images/img/biblio.jpg" alt="SRNAILS">
+                    <div class="overlay">SRnails</div>
+                </div>
+                <!-- Projet 2 -->
+                <div class="project-item">
+                    <img src="images/img/biblio.jpg" alt="Projet 2">
+                    <div class="overlay">Projet 2 - Application Mobile</div>
+                </div>
+                <!-- Projet 3 -->
+                <div class="project-item">
+                    <img src="images/img/biblio.jpg" alt="Projet 3">
+                    <div class="overlay">Projet 3 - Dashboard</div>
+                </div>
+                <!-- Projet 4 -->
+                <div class="project-item">
+                    <img src="images/img/biblio.jpg" alt="Projet 4">
+                    <div class="overlay">Projet 4 - E-commerce</div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>
