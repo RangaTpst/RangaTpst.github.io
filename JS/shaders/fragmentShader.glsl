@@ -22,3 +22,4 @@ void main() {
     // Appliquer la couleur finale
     gl_FragColor = vec4(color, 0.5);
 }`;
+        

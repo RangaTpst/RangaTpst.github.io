@@ -89,3 +89,16 @@ function onWindowResize() {
 
 window.addEventListener('resize', onWindowResize);
 onWindowResize();
+
+document.querySelectorAll('.formation-card').forEach(card => {
+    card.addEventListener('mouseover', () => {
+        // Cache tous les détails
+        document.querySelectorAll('.formation-detail').forEach(detail => {
+            detail.classList.remove('active');
+        });
+
+        // Affiche le détail correspondant
+        const detailId = card.getAttribute('data-detail');
+        document.querySelector(detailId).classList.add('active');
+    });
+});

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Nicolas</title>
+    <title>Portfolio - Ranga</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="JS/script.js" defer></script>
@@ -30,7 +30,7 @@
             <li><a href="#about">À propos</a></li>
             <li><a href="#formation">Formation</a></li>
             <li><a href="#skills">Compétences professionnelles</a></li>
-            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#certifications">Compétences informatiques</a></li>
             <li><a href="#projects">Projets</a></li>
         </ul>
     </aside>
@@ -73,23 +73,48 @@
         </section>
         <section id="formation">
             <h2>Formation</h2>
-            <p><br><br>
-                Au cours de ma formation en BTS SIO option SLAM, j'ai acquis des compétences variées me permettant d'intervenir sur différents aspects du développement et de la gestion d'applications. Voici un aperçu des compétences techniques que j'ai développées :
-            </p>
-            <br><br>
-            <ul>
-                <li><strong>Développement web et mobile :</strong> Création d'applications dynamiques avec <em>Python, PHP, Java</em> ainsi que des technologies front-end comme <em>HTML, CSS, JavaScript</em>. J'ai également travaillé avec le framework <em>Laravel</em> pour développer des applications web robustes et sécurisées.</li><br><br>
-                <li><strong>Framework Laravel :</strong> Utilisation de <em>Laravel</em> pour le développement d'applications web, y compris la gestion des routes, des middlewares, des contrôleurs, ainsi que l'intégration avec des bases de données via Eloquent ORM.</li><br><br>
-                <li><strong>Gestion de bases de données :</strong> Conception, optimisation et gestion de bases de données relationnelles avec <em>MySQL, PostgreSQL</em>, en utilisant des migrations et des modèles dans Laravel pour une intégration simplifiée.</li><br><br>
-                <li><strong>Sécurité informatique :</strong> Mise en œuvre des meilleures pratiques pour sécuriser les applications web, notamment en utilisant les fonctionnalités de sécurité intégrées de Laravel comme la validation des entrées, l'authentification et la protection CSRF.</li><br><br>
-                <li><strong>Gestion de projet :</strong> Utilisation des méthodologies <em>Agile/Scrum</em> pour le développement collaboratif de projets logiciels, avec une attention particulière portée sur la planification, le suivi et la livraison des projets.</li><br><br>
-                <li><strong>Travail collaboratif :</strong> Utilisation d'outils tels que <em>Git/GitHub</em> pour le contrôle de version, la gestion des branches, et la collaboration en équipe.</li><br><br>
-            </ul>
-            
-            <p>
-                Ces compétences me permettent d'intervenir sur l'ensemble du cycle de vie d'une application, de sa conception à son déploiement, en passant par le développement, les tests, et la sécurisation. Mon objectif est de continuer à renforcer ces compétences tout en explorant de nouvelles technologies comme le <em>Cloud Computing</em> et l'<em>intelligence artificielle</em>.
-            </p>
+            <div class="formations-container">
+                <div class="formation-card" data-detail="#detail-web">
+                    <h3>Développement web et mobile</h3>
+                </div>
+                <div class="formation-card" data-detail="#detail-laravel">
+                    <h3>Framework Laravel</h3>
+                </div>
+                <div class="formation-card" data-detail="#detail-database">
+                    <h3>Gestion de bases de données</h3>
+                </div>
+                <div class="formation-card" data-detail="#detail-security">
+                    <h3>Sécurité informatique</h3>
+                </div>
+                <div class="formation-card" data-detail="#detail-project">
+                    <h3>Gestion de projet</h3>
+                </div>
+                <div class="formation-card" data-detail="#detail-collaboration">
+                    <h3>Travail collaboratif</h3>
+                </div>
+            </div>
+        
+            <!-- Détails cachés -->
+            <div id="detail-web" class="formation-detail">
+                <p>Création d'applications dynamiques avec <em>Python, PHP, Java</em> ainsi que des technologies front-end comme <em>HTML, CSS, JavaScript</em>. J'ai également travaillé avec le framework <em>Laravel</em> pour développer des applications web robustes et sécurisées.</p>
+            </div>
+            <div id="detail-laravel" class="formation-detail">
+                <p>Utilisation de <em>Laravel</em> pour le développement d'applications web, y compris la gestion des routes, des middlewares, des contrôleurs, ainsi que l'intégration avec des bases de données via Eloquent ORM.</p>
+            </div>
+            <div id="detail-database" class="formation-detail">
+                <p>Conception, optimisation et gestion de bases de données relationnelles avec <em>MySQL, PostgreSQL</em>, en utilisant des migrations et des modèles dans Laravel pour une intégration simplifiée.</p>
+            </div>
+            <div id="detail-security" class="formation-detail">
+                <p>Mise en œuvre des meilleures pratiques pour sécuriser les applications web, notamment en utilisant les fonctionnalités de sécurité intégrées de Laravel comme la validation des entrées, l'authentification et la protection CSRF.</p>
+            </div>
+            <div id="detail-project" class="formation-detail">
+                <p>Utilisation des méthodologies <em>Agile/Scrum</em> pour le développement collaboratif de projets logiciels, avec une attention particulière portée sur la planification, le suivi et la livraison des projets.</p>
+            </div>
+            <div id="detail-collaboration" class="formation-detail">
+                <p>Utilisation d'outils tels que <em>Git/GitHub</em> pour le contrôle de version, la gestion des branches, et la collaboration en équipe.</p>
+            </div>
         </section>
+        
         <section id="skills">
             <h2>Compétences professionnelles</h2>
             <div class="skills-item">
@@ -140,7 +165,7 @@
         
         <section id="certifications">
             <div class="certification-header">
-                <h2>Compétences informatiques</h2>
+                <h2>Compétences</h2>
             </div>
             <div class="certification-gallery">
                 <!-- Icône 1 -->

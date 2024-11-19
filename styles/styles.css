@@ -11,27 +11,49 @@ html {
 body {
     font-family: 'Arial', sans-serif;
     overflow-x: hidden;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #E9EFEC; /* Couleur de fond */
+    color: #16423C; /* Couleur principale du texte */
 }
 
-/* En-tête amélioré */
+/* Canvas en arrière-plan */
+canvas#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Toujours derrière le contenu */
+    pointer-events: none; /* Empêche toute interaction avec le canvas */
+    background-color: transparent; /* Assurez-vous qu'il n'a pas de couleur de fond par défaut */
+}
+
+h1, h2, h3 {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Merriweather', serif;
+}
+
+h2 {
+    border-bottom: 2px solid #6A9C89;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* En-tête */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 20px 40px; /* Plus d'espace pour un effet plus grand */
-    z-index: 1000;
+    background-color: #16423C; /* Couleur principale */
+    color: #E9EFEC; /* Texte clair */
+    padding: 20px 40px;
+    z-index: 1000; /* Au-dessus du canvas */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo à gauche */
 header .logo {
     position: absolute;
     left: 20px;
@@ -44,13 +66,6 @@ header .logo img {
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
-}
-
-/* Menu de navigation centré */
-header nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 header nav ul {
@@ -66,24 +81,27 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #E9EFEC; /* Texte clair */
     font-weight: bold;
     transition: color 0.3s;
     font-size: 18px;
 }
 
 header nav ul li a:hover {
-    color: #00ffcc;
+    color: #C4DAD2;
+    text-decoration: underline;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-/* Bandeau latéral invisible par défaut */
+
+/* Sidebar */
 #sidebar {
     position: fixed;
     top: 0;
     left: -220px;
     width: 200px;
     height: 100%;
-    background-color: #444;
+    background-color: #6A9C89; /* Couleur secondaire */
     overflow-y: auto;
     transition: left 0.3s ease;
     z-index: 1001;
@@ -104,23 +122,14 @@ header nav ul li a:hover {
 
 #sidebar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #E9EFEC; /* Texte clair */
     display: block;
     padding: 10px;
 }
 
-canvas#background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-}
-
 /* Conteneur principal */
 main {
-    padding-top: 120px;
+    padding-top: 120px; /* Espace pour éviter de cacher le contenu sous l'en-tête */
     margin: 0 auto;
     width: 80%;
     max-width: 5000px;
@@ -129,16 +138,87 @@ main {
 section {
     margin-bottom: 40px;
     padding: 40px;
-    background-color: #fff;
+    background-color: #C4DAD2; /* Couleur de fond des sections */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     scroll-margin-top: 100px;
 }
 
+/* Section Formation */
+#formation {
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #C4DAD2; /* Fond de la section */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#formation h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #16423C; /* Couleur principale */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #6A9C89;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* Conteneur des cartes */
+.formations-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cartes individuelles */
+.formation-card {
+    flex: 1 1 calc(33% - 20px); /* 3 cartes par ligne */
+    background: #E9EFEC;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+.formation-card:hover {
+    background: #6A9C89; /* Fond au survol */
+    color: #fff; /* Texte blanc au survol */
+    transform: scale(1.05); /* Agrandissement léger */
+}
+
+.formation-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #16423C;
+}
+
+/* Détails des formations */
+.formation-detail {
+    display: none; /* Caché par défaut */
+    padding: 20px;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.formation-detail.active {
+    display: block;
+    opacity: 1; /* Rendu visible */
+}
+
+
+/* Section compétences */
 #skills {
     margin-bottom: 60px;
     padding: 40px;
-    background-color: #ffffff;
+    background-color: #C4DAD2;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -148,8 +228,6 @@ section {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
-    
-    ;
 }
 
 .skills-item.reverse {
@@ -162,9 +240,9 @@ section {
 }
 
 .text h3 {
-    color: #0077cc;
+    color: #16423C; /* Couleur principale */
     margin-bottom: 10px;
-    font-size:xx-large;
+    font-size: xx-large;
 }
 
 .text p {
@@ -176,13 +254,14 @@ section {
 .image {
     width: 30%;
     text-align: center;
-    justify-content: space-around
+    justify-content: space-around;
 }
 
 .image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    border: 2px solid #C4DAD2; /* Contour des images */
     transition: transform 0.3s ease;
 }
 
@@ -190,12 +269,11 @@ section {
     transform: scale(1.05);
 }
 
-
 /* Section "À propos" */
 #about-me {
     margin-bottom: 40px;
     padding: 40px;
-    background-color: #fff;
+    background-color: #C4DAD2;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -204,18 +282,16 @@ section {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
-    
 }
 
 .image-block {
     position: relative;
     width: 30%;
     max-width: 300px;
-    border-radius: 10px;
+    border-radius: 20%;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease;
-    border-radius: 20%;
 }
 
 .image-block:hover {
@@ -225,9 +301,10 @@ section {
 .image-block img {
     width: 100%;
     height: auto;
-    display: block;
+    display: block; 
     transition: filter 0.3s ease;
     object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .image-block:hover img {
@@ -239,7 +316,7 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: #E9EFEC; /* Texte clair */
     font-size: 24px;
     font-weight: bold;
     opacity: 0;
@@ -249,7 +326,6 @@ section {
 .image-block:hover .overlay {
     opacity: 1;
 }
-
 
 /* Section Certifications */
 #certifications {
@@ -262,10 +338,11 @@ section {
 
 .certification-header {
     display: inline-block;
-    background-color: #fff;
+    background-color: #16423C; /* Couleur principale */
     padding: 10px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    color: #E9EFEC; /* Texte clair */
 }
 
 .certification-gallery {
@@ -273,15 +350,15 @@ section {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    flex-wrap:wrap; /* Empêche le retour à la ligne */
-    overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+    flex-wrap: wrap;
+    overflow-x: auto;
 }
 
 .certification-item {
     position: relative;
-    width: 200px; /* Taille uniforme */
+    width: 200px;
     height: 200px;
-    flex-shrink: 0; /* Empêche la réduction des éléments */
+    flex-shrink: 0;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
@@ -289,23 +366,22 @@ section {
 }
 
 .certification-item img {
-    width: 200px;
-    height: 200px;
-    object-fit: contain; /* S'assure que l'image s'adapte sans déformation */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     transition: filter 0.3s ease;
 }
 
 .certification-item:hover img {
-    filter: blur(2px);
     filter: brightness(50%);
 }
 
-.overlay {
+.certification-item .overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: #E9EFEC; /* Texte clair */
     font-size: 14px;
     font-weight: bold;
     text-align: center;
@@ -317,25 +393,21 @@ section {
     opacity: 1;
 }
 
-
 /* Section Projets */
-/* Section Projets spécifique */
 #projects {
-    width: 100vw; /* Utilise toute la largeur de la fenêtre */
-    margin-left: calc(-50vw + 50%); /* Aligne la section au centre tout en occupant 100vw */
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     margin-bottom: 40px;
     padding: 20px 0;
     background: none;
 }
 
 .project-header {
-    background-color: #fff;
+    background-color: #16423C;
     padding: 10px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    margin-left:10%;
-    color: #0077cc;
-    width: fit-content;
+    color: #E9EFEC;
 }
 
 .project-gallery {
@@ -372,7 +444,7 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: #E9EFEC; /* Texte clair */
     font-size: 14px;
     font-weight: bold;
     text-align: center;
@@ -382,4 +454,17 @@ section {
 
 .project-item:hover .overlay {
     opacity: 1;
+}
+
+/* Responsive Design pour les cartes */
+@media (max-width: 768px) {
+    .formation-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cartes par ligne */
+    }
+}
+
+@media (max-width: 480px) {
+    .formation-card {
+        flex: 1 1 100%; /* 1 carte par ligne */
+    }
 }
