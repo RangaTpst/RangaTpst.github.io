@@ -1,0 +1,311 @@
+/* Style général */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* section Header */
+
+/* Header principal */
+#header {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Pleine hauteur */
+    background: linear-gradient(rgba(9, 0, 77, 0.65), rgba(9, 0, 77, 0.65)), url('../images/header_background.jpg') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Texte dans le header principal */
+.header-title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px; /* Espacement entre le texte et le logo */
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease;
+}
+
+/* Menu principal */
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espacement entre les liens */
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.main-menu ul li a:hover {
+    color: #f4a261;
+    text-decoration: underline;
+}
+
+/* Sticky Header */
+#sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(rgba(9, 0, 77, 0.65), rgba(9, 0, 77, 0.65)), url('../images/header_background.jpg') no-repeat center center / cover;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+
+    /* Styles pour l'animation */
+    opacity: 0; /* Initialement invisible */
+    transform: translateY(-20px); /* Légèrement en dehors de l'écran */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition fluide */
+}
+/* Logo compact dans le sticky header */
+#sticky-header .logo {
+    margin: 0;
+    width: 50px; /* Taille réduite du logo */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; /* Conserve le style arrondi */
+}
+
+/* Sticky Header visible */
+#sticky-header.visible {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Position normale */
+}
+
+/* Sticky Header caché */
+#sticky-header.hidden {
+    opacity: 0; /* Invisible */
+    transform: translateY(-20px); /* En dehors de l'écran */
+}
+
+/* Main */
+
+
+/* Style du conteneur des box */
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grille responsive */
+
+}
+
+/* Style des box */
+.box {
+    display:flex;
+    flex-direction: column;
+    background-color: #cedadd;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour effet de profondeur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
+}
+.box h3 {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 50px;
+}
+.box p {
+    margin: 0 10%;
+    font-size:20px;
+}
+.box_image {
+    display: flex; /* Active le modèle Flexbox */
+    justify-content: center; /* Aligne les éléments horizontalement */
+
+
+}
+.box_image img{
+    max-width: 300px;
+    height: auto; /* Conserve les proportions */
+    align-items: center;
+}
+.box_alt {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 100%), url('src/images/portrait_sample.jpg') no-repeat center center / cover;
+    max-width: 100%; /* Taille maximale de la box */
+    margin: 0 auto; /* Centre la box horizontalement */
+    overflow: hidden; /* Cache tout dépassement de l'image */
+}
+
+
+.box_alt img {
+    width: 100%; /* L'image prend 100% de la largeur de la box */
+    height: auto; /* Garde les proportions de l'image */
+    display: block; /* Évite les marges indésirables */
+    margin: 0 auto; /* Centre l'image horizontalement */
+    color: #00000000;
+}
+
+
+/* Effet au survol */
+.box:hover {    
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Accentuation de l'ombre */
+}
+
+/* Section Certifications */
+#certifications {
+    margin-bottom: 40px;
+    padding: 0;
+    text-align: center;
+    background: none;
+    box-shadow: none;
+}
+
+.certification-header {
+    display: inline-block;
+    background-color: #16423C; /* Couleur principale */
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #E9EFEC; /* Texte clair */
+}
+
+.certification-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-x: auto;
+}
+
+.certification-item {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.certification-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+}
+
+.certification-item:hover img {
+    filter: brightness(50%);
+}
+
+.certification-item .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #E9EFEC; /* Texte clair */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certification-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Section Projets */
+#projects {
+    width: 100%;
+    margin-bottom: 40px;
+    background: none;
+}
+
+.project-header {
+
+    margin-bottom: 20px;
+    color: #E9EFEC;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-item {
+    position: relative;
+    width: 25%;
+    height: 350px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.project-item:hover img {
+    filter: brightness(70%);
+    transform: scale(1.05);
+}
+
+.project-item .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #E9EFEC; /* Texte clair */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Animation continue pour le logo */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Taille normale */
+    }
+    50% {
+        transform: scale(1.1); /* Légèrement agrandi */
+    }
+}
+
+/* Responsivité (petits écrans) */
+@media (max-width: 768px) {
+    .main-menu ul {
+        flex-direction: column; /* Menu en colonne sur mobile */
+        gap: 15px;
+    }
+
+    .main-menu ul li a {
+        font-size: 20px; /* Taille légèrement augmentée pour une meilleure lisibilité */
+    }
+
+    #sticky-header .main-menu ul {
+        flex-direction: row; /* Garde le menu horizontal dans le bandeau sticky */
+    }
+}

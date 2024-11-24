@@ -4,167 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="JS/script.js" defer></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
-    <!-- En-tête avec logo et menu centré -->
-    <header>
-        <div class="logo">
-            <img src="images/logo/photo.jpg" alt="Logo">
+    <!-- Header principal -->
+    <header id="header">
+        <h1 class="header-title">Bienvenue sur mon portfolio</h1>
+        <div class="header-content">
+            <img src="src/images/svg/logo.svg" alt="Logo" class="logo">
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="#A_propo">A propo</a></li>
+                    <li><a href="#">Projets</a></li>
+                    <li><a href="#">Mon VC</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Mon CV</a></li>
-                <li><a href="#">Projets</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Bandeau latéral rétractable -->
-    <aside id="sidebar">
-        <ul>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#formation">Formation</a></li>
-            <li><a href="#skills">Compétences professionnelles</a></li>
-            <li><a href="#certifications">Compétences informatiques</a></li>
-            <li><a href="#projects">Projets</a></li>
-        </ul>
-    </aside>
-
-    <!-- Fond interactif -->
-    <canvas id="background"></canvas>
-
-    <!-- Sections de contenu -->
+    <!-- Contenu principal -->
     <main>
-        <section id="about">
-            <h2>À propos de moi</h2>
-            <p><br><br>
-                Je suis Nicolas Rouillé, un passionné du développement web, de la programmation, et de la création de contenu.<br><br>
-                J'adore explorer les nouvelles technologies et m'immerger dans des projets créatifs qui allient design et code. Que ce soit en développant des sites web modernes ou en travaillant sur des applications logicielles, j'aime relever des défis techniques pour apporter des solutions innovantes.<br><br>
-                Côté parcours académique, j'ai obtenu un BAC STI2D avec une spécialisation en Énergies et Environnements (EE), suivi de trois années en faculté d'informatique. Cette formation m'a permis d'acquérir des bases solides en programmation, algorithmes, et conception de systèmes. Actuellement, je poursuis un BTS SIO, option SLAM (Solutions Logicielles et Applications Métiers), où je me spécialise dans le développement de logiciels et la gestion de bases de données.<br><br>
-                En plus de mes compétences en informatique, je suis également un créatif dans l'âme. Dans mon temps libre, je m'adonne au dessin, où je laisse libre cours à mon imagination, ainsi qu'à la photographie, en capturant des moments uniques et des paysages inspirants. Les jeux vidéo occupent également une place importante dans ma vie, que ce soit pour la détente ou pour m'inspirer de nouveaux concepts créatifs.
-                
-            </p>
-        
-            <!-- Blocs d'images avec effets de flou -->
-            <div class="image-links">
-                <!-- Bloc GitHub -->
-                <a href="https://github.com/RangaTpst" target="_blank" class="image-block">
-                    <img src="images/logo/github.png" alt="GitHub">
-                    <div class="overlay">GitHub</div>
-                </a>
-                <!-- Bloc Dessin -->
-                <a href="https://www.instagram.com/ranga_art/" target="_blank" class="image-block">
-                    <img src="images/logo/ranga_art.jpg" alt="Dessin">
-                    <div class="overlay">Dessin</div>
-                </a>
-                <!-- Bloc Photo -->
-                <a href="https://www.instagram.com/rangaphotographe/" target="_blank" class="image-block">
-                    <img src="images/logo/ranga_photo.jpg" alt="Photo">
-                    <div class="overlay">Photo</div>
-                </a>
-            </div>
-        </section>
-            
-        </section>
-        <section id="formation">
-            <h2>Formation</h2>
-            <div class="formations-container">
-                <div class="formation-card" data-detail="#detail-web">
-                    <h3>Développement web et mobile</h3>
+        <!--accueil, boite de présentation & boite "image"-->
+        <section id="A_propo">
+            <div class="box-container">
+            <!--boite présentation-->
+                <div class="box">
+                    <h3>QUI SUIS-JE ?</h3>
+                    <div class="box_image">
+                        <img src="./src/images/logo.png" alt="logo">
+                    </div>
+                <p><br><br>
+                    Je suis <b>Nicolas ROUILLE</b>,<br><br>
+                    Un passionné du développement web, de la programmation, et de la création de contenu.<br><br>
+                    J'adore explorer les nouvelles technologies et m'immerger dans des projets créatifs qui allient design et code. Que ce soit en développant des sites web modernes ou en travaillant sur des applications logicielles, j'aime relever des défis techniques pour apporter des solutions innovantes.<br><br>
+                    Côté parcours académique, j'ai obtenu un BAC STI2D avec une spécialisation en Énergies et Environnements (EE), suivi de trois années en faculté d'informatique. Cette formation m'a permis d'acquérir des bases solides en programmation, algorithmes, et conception de systèmes. Actuellement, je poursuis un BTS SIO, option SLAM (Solutions Logicielles et Applications Métiers), où je me spécialise dans le développement de logiciels et la gestion de bases de données.<br><br>
+                    En plus de mes compétences en informatique, je suis également un créatif dans l'âme. Dans mon temps libre, je m'adonne au dessin, où je laisse libre cours à mon imagination, ainsi qu'à la photographie, en capturant des moments uniques et des paysages inspirants. Les jeux vidéo occupent également une place importante dans ma vie, que ce soit pour la détente ou pour m'inspirer de nouveaux concepts créatifs.
+                    </p>
                 </div>
-                <div class="formation-card" data-detail="#detail-laravel">
-                    <h3>Framework Laravel</h3>
-                </div>
-                <div class="formation-card" data-detail="#detail-database">
-                    <h3>Gestion de bases de données</h3>
-                </div>
-                <div class="formation-card" data-detail="#detail-security">
-                    <h3>Sécurité informatique</h3>
-                </div>
-                <div class="formation-card" data-detail="#detail-project">
-                    <h3>Gestion de projet</h3>
-                </div>
-                <div class="formation-card" data-detail="#detail-collaboration">
-                    <h3>Travail collaboratif</h3>
-                </div>
-            </div>
-        
-            <!-- Détails cachés -->
-            <div id="detail-web" class="formation-detail">
-                <p>Création d'applications dynamiques avec <em>Python, PHP, Java</em> ainsi que des technologies front-end comme <em>HTML, CSS, JavaScript</em>. J'ai également travaillé avec le framework <em>Laravel</em> pour développer des applications web robustes et sécurisées.</p>
-            </div>
-            <div id="detail-laravel" class="formation-detail">
-                <p>Utilisation de <em>Laravel</em> pour le développement d'applications web, y compris la gestion des routes, des middlewares, des contrôleurs, ainsi que l'intégration avec des bases de données via Eloquent ORM.</p>
-            </div>
-            <div id="detail-database" class="formation-detail">
-                <p>Conception, optimisation et gestion de bases de données relationnelles avec <em>MySQL, PostgreSQL</em>, en utilisant des migrations et des modèles dans Laravel pour une intégration simplifiée.</p>
-            </div>
-            <div id="detail-security" class="formation-detail">
-                <p>Mise en œuvre des meilleures pratiques pour sécuriser les applications web, notamment en utilisant les fonctionnalités de sécurité intégrées de Laravel comme la validation des entrées, l'authentification et la protection CSRF.</p>
-            </div>
-            <div id="detail-project" class="formation-detail">
-                <p>Utilisation des méthodologies <em>Agile/Scrum</em> pour le développement collaboratif de projets logiciels, avec une attention particulière portée sur la planification, le suivi et la livraison des projets.</p>
-            </div>
-            <div id="detail-collaboration" class="formation-detail">
-                <p>Utilisation d'outils tels que <em>Git/GitHub</em> pour le contrôle de version, la gestion des branches, et la collaboration en équipe.</p>
-            </div>
-        </section>
-        
-        <section id="skills">
-            <h2>Compétences professionnelles</h2>
-            <div class="skills-item">
-                <!-- Texte à gauche, image à droite -->
-                <div class="text">
-                    <h3>Consultant SAP S/4HANA et SAP ECC</h3>
-                    <p>Expertise dans l'implémentation et l'optimisation des systèmes SAP pour améliorer les processus métiers des entreprises.</p>
-                </div>
-                <div class="image">
-                    <img src="images/img/SAP_ERP.png" alt="SAP">
-                </div>
-            </div>
-            
-            <div class="skills-item reverse">
-                <!-- Texte à droite, image à gauche -->
-                <div class="text">
-                    <h3>Gestion des processus métier</h3>
-                    <p>Optimisation des flux de travail dans la production, la logistique, et la gestion des clients. Création et Support sur les flux de commerce, de la commande client jusqu'à la facture.</p>
-                </div>
-                <div class="image">
-                    <img src="images/img/SAP_MODULE.png" alt="Gestion de Projet">
-                </div>
-            </div>
-            
-            <div class="skills-item">
-                <!-- Texte à gauche, image à droite -->
-                <div class="text">
-                    <h3>Formation des utilisateurs</h3>
-                    <p>Accompagnement des équipes dans la prise en main des systèmes SAP, incluant la formation et le support.</p>
-                </div>
-                <div class="image">
-                    <img src="images/img/training_sap.png" alt="Formation SAP">
-                </div>
-            </div>
-            <div class="skills-item reverse">
-                <!-- Texte à droite, image à gauche -->
-                <div class="text">
-                    <h3>Integration EDI</h3>
-                    <p>Integration EDI avec les partenaires de commerce, pour la gestion des flux de données controllé et modulable <br><br>
-                    L'integration EDI est un facteur majeur de communications entre les différents partenaires grace à la normalisation des documents X12 et EDIFACT. tels que les commandes, les livraisons ou encore les factures. </p>
-                </div>
-                <div class="image">
-                    <img src="images/img/Boomi-01.png" alt="BOOMI_Logo">
+                <!--boite "image"-->
+                <div class="box_alt">
+                    <img src="src/images/portrait_sample.jpg">
                 </div>
             </div>
         </section>
-        
-        
+        <section id="contact">
+            <div class="box-container">
+                <div class="box">
+                    <h3>Ranga_art</h3>
+                    <p>lorem ipsum</p>
+                </div>
+                <div class="box">
+                    <h3>rangaphotographe</h3>
+                    <p>lorem ipsum</p>
+                </div>
+            </div>
+        </section>
         <section id="certifications">
             <div class="certification-header">
                 <h2>Compétences</h2>
@@ -172,33 +67,31 @@
             <div class="certification-gallery">
                 <!-- Icône 1 -->
                 <div class="certification-item">
-                    <img src="images/logo/logo_html_couleur.png" alt="HTML">
+                    <img src="src/images/logo_html_couleur.png" alt="HTML">
                     <div class="overlay">HTML</div>
                 </div>
                 <!-- Icône 2 -->
                 <div class="certification-item">
-                    <img src="images/logo/logo_css_couleur.png" alt="CSS">
+                    <img src="src/images/logo_css_couleur.png" alt="CSS">
                     <div class="overlay">CSS</div>
                 </div>
                 <!-- Icône 3 -->
                 <div class="certification-item">
-                    <img src="images/logo/logo_js_couleur.png" alt="JS">
+                    <img src="src/images/logo_js_couleur.png" alt="JS">
                     <div class="overlay">JavaScript</div>
                 </div>
                 <!-- Icône 4 -->
                 <div class="certification-item">
-                    <img src="images/logo/logo_PHP_Couleur.png" alt="PHP">
+                    <img src="src/images/logo_PHP_Couleur.png" alt="PHP">
                     <div class="overlay">PHP</div>
                 </div>
                 <!-- Icône 5 -->
                 <div class="certification-item">
-                    <img src="images/logo/githublogo.png" alt="Github">
+                    <img src="src/images/githublogo.png" alt="Github">
                     <div class="overlay">Github</div>
                 </div>
             </div>
         </section>
-        
-        
         <section id="projects">
             <div class="project-header">
                 <h2>Projets</h2>
@@ -206,41 +99,39 @@
             <div class="project-gallery">
                 <!-- Projet 1 -->
                 <div class="project-item">
-                    <img src="images/img/biblio.jpg" alt="SRNAILS">
+                    <img src="src/images/srnails.png" alt="SRNAILS">
                     <div class="overlay">SRnails</div>
                 </div>
                 <!-- Projet 2 -->
                 <div class="project-item">
-                    <img src="images/img/biblio.jpg" alt="Projet 2">
+                    <img src="src/images/srnails.png" alt="Projet 2">
                     <div class="overlay">Projet 2 - Application Mobile</div>
                 </div>
                 <!-- Projet 3 -->
                 <div class="project-item">
-                    <img src="images/img/biblio.jpg" alt="Projet 3">
+                    <img src="src/images/srnails.png" alt="Projet 3">
                     <div class="overlay">Projet 3 - Dashboard</div>
                 </div>
                 <!-- Projet 4 -->
                 <div class="project-item">
-                    <img src="images/img/biblio.jpg" alt="Projet 4">
+                    <img src="src/images/srnails.png" alt="Projet 4">
                     <div class="overlay">Projet 4 - E-commerce</div>
                 </div>
             </div>
         </section>
-        
+        <section id="cv" class="cv-section">
+            <h2>Mon CV</h2>
+            <p>
+                Découvrez mon parcours professionnel et académique. Mon CV met en lumière mes compétences.
+            </p>
+            <div class="cv-container">
+                <img src="src/images/cv-étudiant.png" alt="Aperçu de mon CV" class="cv-image">
+                <a href="src/files/CV_Nicolas_Rouille.pdf" class="cv-button" download>Télécharger mon CV</a>
+            </div>
+        </section>
     </main>
+
+    <!-- JavaScript -->
+    <script src="src/js/script.js"></script>
 </body>
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2024 Nicolas Roullié. Tous droits réservés.</p>
-        <ul class="social-links">
-            <li><a href="https://github.com/RangaTpst" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/nicolas-rouill%C3%A9-ba3b42283/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-            <li><a href="mailto:nicolas.rouillanoe@gmail.com"><i class="fas fa-envelope"></i> Contact</a></li>
-
-        </ul>
-        <a href="#top"><i class="back-to-top"></i>Retour en haut</a>
-        
-    </div>
-</footer>
-
 </html>
