@@ -284,6 +284,12 @@
     opacity: 1;
 }
 
+.cv-section{
+    max-width: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /* Animation continue pour le logo */
 @keyframes pulse {
     0%, 100% {
