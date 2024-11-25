@@ -107,7 +107,6 @@
 .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grille responsive */
-
 }
 
 /* Style des box */
@@ -284,11 +283,126 @@
     opacity: 1;
 }
 
-.cv{
-    max-width: 100vh;
+.cv-container{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 100vh;
 }
+.cv-container img {
+
+    max-width: 100vh;
+}
+
+.portfolio-footer {
+    background-color: #333;
+    color: #f2f2f2;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    border-top: 3px solid #007BFF;
+}
+
+.portfolio-footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.portfolio-footer p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.portfolio-footer .social-links {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.portfolio-footer .social-links li {
+    display: inline;
+}
+
+.portfolio-footer .social-links a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.portfolio-footer .social-links a:hover {
+    color: #1E90FF;
+}
+
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.contact-form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
 
 /* Animation continue pour le logo */
 @keyframes pulse {
