@@ -4,6 +4,7 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* section Header */
@@ -170,12 +171,19 @@
 }
 
 .certification-header {
-    display: inline-block;
-    background-color: #16423C; /* Couleur principale */
-    padding: 10px 20px;
-    border-radius: 10px;
+    width: 100%;
     margin-bottom: 20px;
-    color: #E9EFEC; /* Texte clair */
+    color: #E9EFEC;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase; /* Met en majuscules pour plus d'impact */
+    letter-spacing: 1.5px; /* Espacement entre les lettres pour plus de lisibilité */
+    padding: 10px 0;
+    background: linear-gradient(to right, #16423C, #1E5B4E); /* Dégradé subtil pour un effet stylé */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre pour du relief */
+    display: inline-block; /* Ajuste la largeur au texte */
+    padding: 12px 25px; /* Ajoute de l'espace autour du texte */
 }
 
 .certification-gallery {
@@ -227,45 +235,68 @@
 }
 
 /* Section Projets */
+/* Section Projets */
 #projects {
     width: 100%;
+    background-color: #f5f5f5;
     margin-bottom: 40px;
     background: none;
 }
 
+/* Titre de la section projets */
 .project-header {
-
+    width: 100%;
     margin-bottom: 20px;
     color: #E9EFEC;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase; /* Met en majuscules pour plus d'impact */
+    letter-spacing: 1.5px; /* Espacement entre les lettres pour plus de lisibilité */
+    padding: 10px 0;
+    background: linear-gradient(to right, #16423C, #1E5B4E); /* Dégradé subtil pour un effet stylé */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre pour du relief */
+    display: inline-block; /* Ajuste la largeur au texte */
+    padding: 12px 25px; /* Ajoute de l'espace autour du texte */
 }
 
+
+/* Conteneur des projets */
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px; /* Ajout d'un espace entre les projets */
 }
 
+/* Élément de projet */
 .project-item {
     position: relative;
-    width: 25%;
-    height: 350px;
+    width: 24%;
+    height: 300px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 10px; /* Adoucit les bords */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une légère ombre */
 }
 
+/* Image du projet */
 .project-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: filter 0.3s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    border-radius: 10px; /* Suivi du border-radius pour une meilleure intégration */
 }
 
+/* Effet au survol */
 .project-item:hover img {
     filter: brightness(70%);
     transform: scale(1.05);
 }
 
+/* Overlay sur l'image */
 .project-item .overlay {
     position: absolute;
     top: 50%;
@@ -279,19 +310,96 @@
     transition: opacity 0.3s ease;
 }
 
+/* Apparition de l'overlay au survol */
 .project-item:hover .overlay {
     opacity: 1;
 }
 
-.cv-container{
+
+/* Section CV */
+.cv-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.cv-section h2 {
+    font-size: 28px;
+    color: #16423C;
+    margin-bottom: 15px;
+}
+
+.cv-section p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Conteneur du CV */
+.cv-container {
     display: flex;
     flex-direction: column;
-    max-width: 100vh;
+    align-items: center;
     justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-.cv-container img {
 
-    max-width: 100vh;
+/* Image du CV */
+.cv-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton de téléchargement du CV */
+.cv-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cv-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cv-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .cv-section h2 {
+        font-size: 24px;
+    }
+
+    .cv-section p {
+        font-size: 16px;
+    }
+
+    .cv-button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
 }
 
 .portfolio-footer {
