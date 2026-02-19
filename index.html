@@ -1,204 +1,197 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ma Boutique</title>
-	<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONTO FOOD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f6e7;
+        }
+        .navbar-monto {
+            background-color: #aab99a;
+        }
+        .btn-monto {
+            background-color: #aab99a;
+            color: #222;
+            border: none;
+            border-radius: 16px;
+            padding: 0.5rem 2rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+        }
+        .btn-monto:hover {
+            background-color: #8e9e7a;
+            color: #fff;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') center center/cover no-repeat;
+            padding: 3rem 0 2rem 0;
+            text-align: center;
+        }
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .hero-desc {
+            color: #222;
+            margin-bottom: 1.5rem;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .navbar-logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
-<body class="bg-light">
-	<!-- Barre de navigation e-commerce -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4"> <!-- navbar : barre de navigation, navbar-expand-lg : responsive, bg-primary : fond bleu, navbar-dark : texte clair -->
-		<div class="container">
-			<a class="navbar-brand" href="#">MaBoutique</a> <!-- navbar-brand : logo/nom du site -->
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ms-auto"> <!-- ms-auto : marge à gauche auto pour aligner à droite -->
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">Accueil</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Produits</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="bi bi-cart"></i> Panier</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+<body>
+    <!-- Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-monto">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/src/logo.png" alt="logo" class="navbar-logo">
+                MONTO FOOD
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">La Carte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">A porpo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-	<div class="container">
-		<h1 class="mb-4 text-center">Nos produits</h1>
-		<div class="row g-4">
-			<!-- 12 produits -->
-			<!-- Chaque produit occupe 3 colonnes sur grand écran, 4 sur moyen, 6 sur petit -->
-			<!-- Boucle simulée pour 12 cards -->
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
-				<div class="card h-100"> <!-- h-100 : hauteur 100% pour aligner les cards -->
-					<img src="https://via.placeholder.com/300x200?text=Produit+1" class="card-img-top" alt="Produit 1">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title">Produit 1</h5>
-						<p class="card-text">Description courte du produit 1.</p>
-						<div class="mt-auto">
-							<span class="fw-bold">19,99 €</span>
-							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
-				<div class="card h-100">
-					<img src="https://via.placeholder.com/300x200?text=Produit+2" class="card-img-top" alt="Produit 2">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title">Produit 2</h5>
-						<p class="card-text">Description courte du produit 2.</p>
-						<div class="mt-auto">
-							<span class="fw-bold">24,99 €</span>
-							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
-				<div class="card h-100">
-					<img src="https://via.placeholder.com/300x200?text=Produit+3" class="card-img-top" alt="Produit 3">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title">Produit 3</h5>
-						<p class="card-text">Description courte du produit 3.</p>
-						<div class="mt-auto">
-							<span class="fw-bold">14,99 €</span>
-							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
-				<div class="card h-100">
-					<img src="https://via.placeholder.com/300x200?text=Produit+4" class="card-img-top" alt="Produit 4">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title">Produit 4</h5>
-						<p class="card-text">Description courte du produit 4.</p>
-						<div class="mt-auto">
-							<span class="fw-bold">29,99 €</span>
-							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
-				<div class="card h-100">
-					<img src="https://via.placeholder.com/300x200?text=Produit+5" class="card-img-top" alt="Produit 5">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title">Produit 5</h5>
-						<p class="card-text">Description courte du produit 5.</p>
-						<div class="mt-auto">
-							<span class="fw-bold">9,99 €</span>
-							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
-				<div class="card h-100">
-					<img src="https://via.placeholder.com/300x200?text=Produit+6" class="card-img-top" alt="Produit 6">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title">Produit 6</h5>
-						<p class="card-text">Description courte du produit 6.</p>
-						<div class="mt-auto">
-							<span class="fw-bold">39,99 €</span>
-							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
-				<div class="card h-100">
-					<img src="https://via.placeholder.com/300x200?text=Produit+7" class="card-img-top" alt="Produit 7">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title">Produit 7</h5>
-						<p class="card-text">Description courte du produit 7.</p>
-						<div class="mt-auto">
-							<span class="fw-bold">12,99 €</span>
-							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
-				<div class="card h-100">
-					<img src="https://via.placeholder.com/300x200?text=Produit+8" class="card-img-top" alt="Produit 8">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title">Produit 8</h5>
-						<p class="card-text">Description courte du produit 8.</p>
-						<div class="mt-auto">
-							<span class="fw-bold">17,99 €</span>
-							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
-				<div class="card h-100">
-					<img src="https://via.placeholder.com/300x200?text=Produit+9" class="card-img-top" alt="Produit 9">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title">Produit 9</h5>
-						<p class="card-text">Description courte du produit 9.</p>
-						<div class="mt-auto">
-							<span class="fw-bold">21,99 €</span>
-							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
-				<div class="card h-100">
-					<img src="https://via.placeholder.com/300x200?text=Produit+10" class="card-img-top" alt="Produit 10">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title">Produit 10</h5>
-						<p class="card-text">Description courte du produit 10.</p>
-						<div class="mt-auto">
-							<span class="fw-bold">15,99 €</span>
-							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
-				<div class="card h-100">
-					<img src="https://via.placeholder.com/300x200?text=Produit+11" class="card-img-top" alt="Produit 11">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title">Produit 11</h5>
-						<p class="card-text">Description courte du produit 11.</p>
-						<div class="mt-auto">
-							<span class="fw-bold">18,99 €</span>
-							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
-				<div class="card h-100">
-					<img src="https://via.placeholder.com/300x200?text=Produit+12" class="card-img-top" alt="Produit 12">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title">Produit 12</h5>
-						<p class="card-text">Description courte du produit 12.</p>
-						<div class="mt-auto">
-							<span class="fw-bold">22,99 €</span>
-							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center justify-content-center" style="background: url('/src/chalet.jpg') center center/cover no-repeat; min-height: 350px; padding: 3rem 0 2rem 0;">
+        <div class="container" style="background: rgba(248,246,231,0.85); border-radius: 1rem; padding: 2rem 1rem; max-width: 1000px;">
+            <div class="hero-title">La montagne dans votre assiette !</div>
+            <div class="hero-desc mb-2">
+                Venez découvrir nos spécialités montagnardes issues de produits locaux et responsables.<br>
+                Que se soit sur place ou à emporter !
+            </div>
+            <div>
+                <button class="btn btn-monto">La carte</button>
+                <button class="btn btn-monto">J'emporte !</button>
+            </div>
+        </div>
+    </section>
 
-	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- About Section -->
+    <section class="py-5" style="background-color: #aab99a;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold">Qui sommes nous ?</h2>
+                    <p>Monto, qui signifie montagne en espéranto, est né d'une idée simple : créer un lieu universel où chacun se retrouve autour des saveurs authentiques de l'altitude. Le choix de ce nom n'est pas anodin. Comme l'espéranto, qui rassemble au-delà des frontières, Monto veut être un point de rencontre entre tradition, partage et convivialité.</p>
+                    <p>L'histoire commence avec une petite équipe de passionnés de montagne et de gastronomie, attachés à leurs racines et au respect du terroir. Originaires de la région pour certains, adoptés par elle pour d'autres, nous partageons tous le même attachement aux paysages, aux saisons et aux produits locaux.</p>
+                    <p>Aujourd'hui, Monto réunit des chefs, serveurs et artisans animés par une ambition commune : transmettre l'esprit montagnard à travers une cuisine généreuse, sincère et chaleureuse. Chaque plat raconte une histoire, chaque service est pensé comme un moment de partage.</p>
+                    <p>Chez Monto, la montagne n'est pas seulement un décor — c'est une culture, une équipe et une passion que nous vivons au quotidien.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="/src/raclette.jpg" alt="Raclette" class="img-fluid rounded shadow w-100" style="height: 100%; object-fit: cover; min-height: 300px; max-height: 500px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spécialités Section -->
+    <section class="py-5" style="background-color: #f8f6e7;">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Nos spécialités</h2>
+            <div class="row mb-5">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <div>
+                        <h4 class="mb-2">Mont D'or</h4>
+                        <p>Une recette authentique mêlant la douceur d'un fromage fondant et la finesse d'une charcuterie délicatement séchée.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end text-center">
+                    <img src="src/montdor.webp" alt="Mont d'Or" class="img-fluid rounded shadow mb-3" style="max-width: 300px;">
+                </div>
+            </div>
+            <div class="row mb-5 flex-md-row flex-column-reverse">
+                <div class="col-md-6 text-md-start text-center">
+                    <img src="src/fonduevaudoise.webp" alt="Fondue vaudoise" class="img-fluid rounded shadow mb-3" style="max-width: 300px;">
+                </div>
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <div>
+                        <h4 class="mb-2">Fondue vaudoise</h4>
+                        <p>Un mélange authentique de fromages suisses offrant douceur, caractère et une texture parfaitement fondante.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <div>
+                        <h4 class="mb-2">Aligot</h4>
+                        <p>Un plat emblématique associant douceur de la pomme de terre et caractère du fromage fondu.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end text-center">
+                    <img src="src/aligot.webp" alt="Aligot" class="img-fluid rounded shadow mb-3" style="max-width: 300px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5" style="background-color: #aab99a;">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <div class="bg-transparent p-3">
+                        <h4 class="fw-bold mb-2">Nous Contacter</h4>
+                        <div>01 23 45 67 89</div>
+                        <a href="mailto:contact@example.com">contact@example.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <iframe
+                        width="400"
+                        height="200"
+                        frameborder="0"
+                        style="border:0; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-2.769%2C47.655%2C-2.754%2C47.664&amp;layer=mapnik&amp;marker=47.658%2C-2.760"
+                        allowfullscreen>
+                    </iframe>
+                    <div><small><a href="https://www.openstreetmap.org/?mlat=47.658&amp;mlon=-2.760#map=15/47.658/-2.760" target="_blank">Voir sur OpenStreetMap</a></small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4" style="background-color: #aab99a; border-top: 2px solid #222;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="fw-bold mb-2">MONTO FOOD</h3>
+                    <div class="mb-2">
+                        <a href="#" class="btn btn-monto btn-sm me-2">instagram</a>
+                        <a href="#" class="btn btn-monto btn-sm me-2">twitter</a>
+                        <a href="#" class="btn btn-monto btn-sm">facebook</a>
+                    </div>
+                    <div>All rights reserved ©Monto</div>
+                </div>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <a href="#" class="btn btn-monto btn-sm mb-2">Mentions Légal</a><br>
+                    <a href="#" class="btn btn-monto btn-sm">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
