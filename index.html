@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ma Boutique</title>
+	<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+	<!-- Barre de navigation e-commerce -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4"> <!-- navbar : barre de navigation, navbar-expand-lg : responsive, bg-primary : fond bleu, navbar-dark : texte clair -->
+		<div class="container">
+			<a class="navbar-brand" href="#">MaBoutique</a> <!-- navbar-brand : logo/nom du site -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto"> <!-- ms-auto : marge à gauche auto pour aligner à droite -->
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Accueil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Produits</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="bi bi-cart"></i> Panier</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<h1 class="mb-4 text-center">Nos produits</h1>
+		<div class="row g-4">
+			<!-- 12 produits -->
+			<!-- Chaque produit occupe 3 colonnes sur grand écran, 4 sur moyen, 6 sur petit -->
+			<!-- Boucle simulée pour 12 cards -->
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
+				<div class="card h-100"> <!-- h-100 : hauteur 100% pour aligner les cards -->
+					<img src="https://via.placeholder.com/300x200?text=Produit+1" class="card-img-top" alt="Produit 1">
+					<div class="card-body d-flex flex-column">
+						<h5 class="card-title">Produit 1</h5>
+						<p class="card-text">Description courte du produit 1.</p>
+						<div class="mt-auto">
+							<span class="fw-bold">19,99 €</span>
+							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
+				<div class="card h-100">
+					<img src="https://via.placeholder.com/300x200?text=Produit+2" class="card-img-top" alt="Produit 2">
+					<div class="card-body d-flex flex-column">
+						<h5 class="card-title">Produit 2</h5>
+						<p class="card-text">Description courte du produit 2.</p>
+						<div class="mt-auto">
+							<span class="fw-bold">24,99 €</span>
+							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
+				<div class="card h-100">
+					<img src="https://via.placeholder.com/300x200?text=Produit+3" class="card-img-top" alt="Produit 3">
+					<div class="card-body d-flex flex-column">
+						<h5 class="card-title">Produit 3</h5>
+						<p class="card-text">Description courte du produit 3.</p>
+						<div class="mt-auto">
+							<span class="fw-bold">14,99 €</span>
+							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
+				<div class="card h-100">
+					<img src="https://via.placeholder.com/300x200?text=Produit+4" class="card-img-top" alt="Produit 4">
+					<div class="card-body d-flex flex-column">
+						<h5 class="card-title">Produit 4</h5>
+						<p class="card-text">Description courte du produit 4.</p>
+						<div class="mt-auto">
+							<span class="fw-bold">29,99 €</span>
+							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
+				<div class="card h-100">
+					<img src="https://via.placeholder.com/300x200?text=Produit+5" class="card-img-top" alt="Produit 5">
+					<div class="card-body d-flex flex-column">
+						<h5 class="card-title">Produit 5</h5>
+						<p class="card-text">Description courte du produit 5.</p>
+						<div class="mt-auto">
+							<span class="fw-bold">9,99 €</span>
+							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
+				<div class="card h-100">
+					<img src="https://via.placeholder.com/300x200?text=Produit+6" class="card-img-top" alt="Produit 6">
+					<div class="card-body d-flex flex-column">
+						<h5 class="card-title">Produit 6</h5>
+						<p class="card-text">Description courte du produit 6.</p>
+						<div class="mt-auto">
+							<span class="fw-bold">39,99 €</span>
+							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
+				<div class="card h-100">
+					<img src="https://via.placeholder.com/300x200?text=Produit+7" class="card-img-top" alt="Produit 7">
+					<div class="card-body d-flex flex-column">
+						<h5 class="card-title">Produit 7</h5>
+						<p class="card-text">Description courte du produit 7.</p>
+						<div class="mt-auto">
+							<span class="fw-bold">12,99 €</span>
+							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
+				<div class="card h-100">
+					<img src="https://via.placeholder.com/300x200?text=Produit+8" class="card-img-top" alt="Produit 8">
+					<div class="card-body d-flex flex-column">
+						<h5 class="card-title">Produit 8</h5>
+						<p class="card-text">Description courte du produit 8.</p>
+						<div class="mt-auto">
+							<span class="fw-bold">17,99 €</span>
+							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
+				<div class="card h-100">
+					<img src="https://via.placeholder.com/300x200?text=Produit+9" class="card-img-top" alt="Produit 9">
+					<div class="card-body d-flex flex-column">
+						<h5 class="card-title">Produit 9</h5>
+						<p class="card-text">Description courte du produit 9.</p>
+						<div class="mt-auto">
+							<span class="fw-bold">21,99 €</span>
+							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
+				<div class="card h-100">
+					<img src="https://via.placeholder.com/300x200?text=Produit+10" class="card-img-top" alt="Produit 10">
+					<div class="card-body d-flex flex-column">
+						<h5 class="card-title">Produit 10</h5>
+						<p class="card-text">Description courte du produit 10.</p>
+						<div class="mt-auto">
+							<span class="fw-bold">15,99 €</span>
+							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
+				<div class="card h-100">
+					<img src="https://via.placeholder.com/300x200?text=Produit+11" class="card-img-top" alt="Produit 11">
+					<div class="card-body d-flex flex-column">
+						<h5 class="card-title">Produit 11</h5>
+						<p class="card-text">Description courte du produit 11.</p>
+						<div class="mt-auto">
+							<span class="fw-bold">18,99 €</span>
+							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3" >
+				<div class="card h-100">
+					<img src="https://via.placeholder.com/300x200?text=Produit+12" class="card-img-top" alt="Produit 12">
+					<div class="card-body d-flex flex-column">
+						<h5 class="card-title">Produit 12</h5>
+						<p class="card-text">Description courte du produit 12.</p>
+						<div class="mt-auto">
+							<span class="fw-bold">22,99 €</span>
+							<a href="#" class="btn btn-primary btn-sm float-end">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
